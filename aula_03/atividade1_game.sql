@@ -2,16 +2,17 @@ CREATE DATABASE db_generation_game_online;
 
 USE db_generation_game_online;
 
-CREATE TABLE tb_classes(
+-- ISSO QUE DÁ NUNCA TER JOGADO RPG, MAS PARECE SER LEGAL
+CREATE TABLE tb_classes( -- Eu acho que tinha que ter classe como atributo e depois popular com os tipos. 
 id bigint AUTO_INCREMENT,
-arqueiro varchar(255) NOT NULL,
+arqueiro varchar(255) NOT NULL,  -- tinha que ser um dado, não atributo
 ladrão varchar(255) NOT NULL,
 curandeiro varchar(255) NOT NULL,
 PRIMARY KEY (id)
 );
 
-INSERT INTO tb_classes (arqueiro, ladrão, curandeiro)
-VALUES ("Arqueiro SIM", "Ladrão NÃO", "Curandeiro NÃO"); -- FK 1
+INSERT INTO tb_classes (arqueiro, ladrão, curandeiro) 
+VALUES ("Arqueiro SIM", "Ladrão NÃO", "Curandeiro NÃO"); -- FK 1 - Aqui no caso estaria somente Arqueiro e não os três. 
 
 INSERT INTO tb_classes (arqueiro, ladrão, curandeiro)
 VALUES ("Arqueiro NÃO", "Ladrão NÃO", "Curandeiro SIM"); -- FK 2
